@@ -664,6 +664,30 @@
     .footer-linkedin a { color: var(--red); text-decoration: none; }
     .footer-linkedin a:hover { text-decoration: underline; }
 
+    /* ── HAMBURGER ─────────────────────────────────────────────── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 101;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .nav.open .nav-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav.open .nav-hamburger span:nth-child(2) { opacity: 0; }
+    .nav.open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
     /* ── RESPONSIVE ────────────────────────────────────────────── */
     @media (max-width: 700px) {
       .hero { grid-template-columns: 1fr; }
@@ -672,9 +696,36 @@
       .proof-item { border-right: none; border-bottom: 1px solid var(--gray-1); }
       .section-grid { grid-template-columns: 1fr; gap: 1.5rem; }
       .creds, .two-col, .featured-grid, .qualifier-body, .cluster-articles { grid-template-columns: 1fr; }
-      .nav-links { gap: 1rem; }
       .series-footer { flex-direction: column; align-items: flex-start; }
       .book-bar { margin: 0 1rem; }
+
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        background: rgba(255,255,255,0.97);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border-bottom: 1px solid var(--gray-1);
+        padding: 0.5rem 0;
+      }
+      .nav.open .nav-links { display: flex; }
+      .nav-links a {
+        padding: 0.85rem 2rem;
+        font-size: 15px;
+        border-bottom: 1px solid var(--gray-1);
+      }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-cta {
+        margin: 0.5rem 2rem;
+        text-align: center;
+        border-radius: var(--radius);
+      }
     }
   </style>
 </head>
@@ -682,12 +733,15 @@
 <div class="site">
 
   <!-- NAV -->
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <div class="nav-logo">
       <img src="../../assets/copetersen-logo.svg" alt="">
       <span class="nav-logo-text">copetersen<span>.ai</span></span>
     </div>
-    <div class="nav-links">
+    <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
       <a href="#about">About</a>
       <a href="#work">Work with me</a>
       <a href="#thinking">Thinking</a>
@@ -994,5 +1048,13 @@
   </footer>
 
 </div>
+<script>
+  const nav = document.getElementById('nav');
+  const toggle = document.getElementById('nav-toggle');
+  toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => nav.classList.remove('open'));
+  });
+</script>
 </body>
 </html>
