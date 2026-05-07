@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christian O. Petersen | Vistage Chair, Executive Coach and AI Advisor | copetersen.ai</title>
+  <meta name="description" content="Vistage Chair Christian O. Petersen helps CEOs and business owners in the mid peninsula make better decisions through peer advisory groups, 1:1 coaching, and AI strategy.">
+  <style>
+    @font-face {
+      font-family: 'Open Sans';
+      src: url('../../fonts/OpenSans-VariableFont_wdth_wght.ttf') format('truetype');
+      font-weight: 100 900; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Open Sans';
+      src: url('../../fonts/OpenSans-Italic-VariableFont_wdth_wght.ttf') format('truetype');
+      font-weight: 100 900; font-style: italic; font-display: swap;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --ink:        #1A1A2E;
+      --ink-light:  #2E2E4A;
+      --red:        #c80815;
+      --red-mid:    #b00612;
+      --red-light:  #e02030;
+      --slate:      #3B5068;
+      --white:      #FFFFFF;
+      --off-white:  #F7F5F2;
+      --gray-1:     #EAE7E2;
+      --gray-2:     #D4CFC9;
+      --gray-3:     #A09B94;
+      --gray-4:     #6B6560;
+      --gray-5:     #3D3935;
+      --max-w:      900px;
+      --radius:     4px;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .site { max-width: var(--max-w); margin: 0 auto; }
+
+    /* ── NAV ───────────────────────────────────────────────────── */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid var(--gray-1);
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: -0.2px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .nav-logo .nav-logo-text span { color: var(--red); }
+    .nav-logo img { height: 26px; width: 26px; display: block; }
+    .nav-links { display: flex; gap: 2rem; font-size: 13px; align-items: center; }
+    .nav-links a {
+      color: var(--gray-4);
+      text-decoration: none;
+      font-weight: 300;
+      transition: color 0.15s;
+      cursor: pointer;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta {
+      background: var(--red);
+      color: var(--white) !important;
+      padding: 0.45rem 1.1rem;
+      border-radius: var(--radius);
+      font-size: 13px;
+      font-weight: 400;
+      transition: background 0.15s;
+    }
+    .nav-cta:hover { background: var(--red-mid) !important; }
+
+    /* ── HERO ──────────────────────────────────────────────────── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      padding: 4rem 2rem 3rem;
+      align-items: start;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .hero-headline {
+      font-size: 32px;
+      font-weight: 200;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.03em;
+    }
+    .hero-sub {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.8;
+      color: var(--ink-light);
+      margin-bottom: 1.75rem;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      padding: 0.75rem 1.6rem;
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-weight: 400;
+      font-family: inherit;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 0.85rem;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .hero-cta:hover { background: var(--red-mid); }
+    .hero-cta-note {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--gray-4);
+      line-height: 1.6;
+    }
+    .hero-photo {
+      border-radius: 0;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      border: none;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .hero-photo img {
+      width: 100%; height: 100%;
+      object-fit: contain; object-position: center bottom;
+      display: block;
+    }
+
+    /* ── PROOF STRIP ───────────────────────────────────────────── */
+    .proof {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--gray-1);
+      border-bottom: 1px solid var(--gray-1);
+    }
+    .proof-item {
+      padding: 1.25rem 2rem;
+      border-right: 1px solid var(--gray-1);
+    }
+    .proof-item:last-child { border-right: none; }
+    .proof-num {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+    .proof-label {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--ink-light);
+      line-height: 1.5;
+    }
+
+    /* ── SECTION GRID ──────────────────────────────────────────── */
+    .section-grid {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 3rem;
+      padding: 3.5rem 2rem;
+    }
+    .section-grid.shaded { background: var(--off-white); }
+    .section-grid + .section-grid { border-top: 1px solid var(--gray-1); }
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 600;
+      padding-top: 6px;
+    }
+    .accent-rule {
+      width: 28px; height: 2px;
+      background: var(--red);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── ABOUT ─────────────────────────────────────────────────── */
+    .about-content h2 {
+      font-size: 22px;
+      font-weight: 200;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+    .about-body p {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.8;
+      color: var(--ink-light);
+      margin-bottom: 1.1rem;
+    }
+    .about-body p:last-child { margin-bottom: 0; }
+    .about-body strong { color: var(--ink); font-weight: 500; }
+    .creds {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 1.75rem;
+    }
+    .cred-card {
+      background: var(--off-white);
+      border-radius: var(--radius);
+      padding: 0.9rem 1.1rem;
+      border: 1px solid var(--gray-1);
+    }
+    .cred-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+    .cred-sub {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--ink-light);
+      line-height: 1.55;
+    }
+
+    /* ── PEER GROUP ────────────────────────────────────────────── */
+    .vistage-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--white);
+      border: 1px solid var(--gray-2);
+      border-radius: 9999px;
+      padding: 0.3rem 0.85rem 0.3rem 0.6rem;
+      margin-bottom: 1.25rem;
+    }
+    .vistage-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--red);
+      flex-shrink: 0;
+    }
+    .vistage-pill-text {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--gray-4);
+    }
+    .peer-content h2 {
+      font-size: 22px;
+      font-weight: 200;
+      color: var(--ink);
+      margin-bottom: 1.1rem;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+    .peer-content p {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.8;
+      color: var(--ink-light);
+      margin-bottom: 1rem;
+    }
+    .peer-content strong { color: var(--ink); font-weight: 500; }
+    .photo-block {
+      border-radius: var(--radius);
+      overflow: hidden;
+      height: 280px;
+      margin-top: 1.5rem;
+      border: 1px solid var(--gray-1);
+    }
+    .photo-block img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
+    .about-photo {
+      height: auto;
+      aspect-ratio: 3 / 2;
+      margin: 1.75rem 0 0.5rem;
+    }
+    .about-photo img { object-position: center center; }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 1.75rem;
+    }
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem;
+      border: 1px solid var(--gray-1);
+    }
+    .card.full { grid-column: 1 / -1; }
+    .card-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .card-text {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--ink-light);
+      line-height: 1.65;
+    }
+    .stat-bar {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.25rem;
+      align-items: center;
+      background: var(--ink);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.25rem;
+      margin-top: 1.25rem;
+    }
+    .stat-num {
+      font-size: 28px;
+      font-weight: 200;
+      color: var(--red-light);
+      white-space: nowrap;
+      letter-spacing: -0.02em;
+    }
+    .stat-text {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+    }
+    .qualifier {
+      margin-top: 1.75rem;
+      border: 1px solid var(--gray-1);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .qualifier-header {
+      background: var(--off-white);
+      padding: 0.75rem 1.2rem;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink);
+      border-bottom: 1px solid var(--gray-1);
+    }
+    .qualifier-body {
+      padding: 1.1rem 1.2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1.5rem;
+      background: var(--white);
+    }
+    .qualifier-item {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--ink-light);
+      line-height: 1.6;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .qualifier-item::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0.55em;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--red);
+    }
+    .qualifier-note {
+      padding: 0.75rem 1.2rem;
+      border-top: 1px solid var(--gray-1);
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--gray-5);
+      line-height: 1.55;
+      font-style: italic;
+      background: var(--white);
+    }
+
+    /* ── THE CALL ──────────────────────────────────────────────── */
+    .call-content h2 {
+      font-size: 22px;
+      font-weight: 200;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .call-intro {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.8;
+      color: var(--ink-light);
+      margin-bottom: 1.75rem;
+    }
+    .call-steps {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+      border: 1px solid var(--gray-1);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .call-step {
+      padding: 1.1rem 1.25rem;
+      border-bottom: 1px solid var(--gray-1);
+    }
+    .call-step:last-child { border-bottom: none; }
+    .call-step-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .call-step-text {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--ink-light);
+      line-height: 1.65;
+    }
+    .call-cta-row { display: flex; align-items: center; gap: 1.25rem; }
+    .call-btn {
+      background: var(--red);
+      color: var(--white);
+      padding: 0.75rem 1.6rem;
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-weight: 400;
+      font-family: inherit;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.15s;
+    }
+    .call-btn:hover { background: var(--red-mid); }
+    .call-small {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--gray-5);
+      line-height: 1.55;
+    }
+
+    /* ── THINKING ──────────────────────────────────────────────── */
+    .thinking-intro h2 {
+      font-size: 22px;
+      font-weight: 200;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+    .thinking-intro p {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.8;
+      color: var(--ink-light);
+      margin-bottom: 0.9rem;
+    }
+    .book-bar {
+      margin: 0 2rem;
+      padding: 1.1rem 1.25rem;
+      background: var(--off-white);
+      border: 1px solid var(--gray-1);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .book-icon {
+      width: 36px; height: 36px;
+      background: var(--ink);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .book-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+    .book-sub {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--gray-5);
+      line-height: 1.55;
+    }
+    .featured {
+      padding: 2rem;
+      border-bottom: 1px solid var(--gray-1);
+      margin-top: 1.5rem;
+    }
+    .feat-label {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .featured-card {
+      border: 1px solid var(--gray-1);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: border-color 0.15s;
+      text-decoration: none;
+    }
+    .featured-card:hover { border-color: var(--red); }
+    .featured-tag {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 600;
+    }
+    .featured-title {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+    .featured-desc {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--ink-light);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .featured-link {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--red);
+    }
+    .clusters { padding: 2rem; border-bottom: 1px solid var(--gray-1); }
+    .cluster { margin-bottom: 1.75rem; }
+    .cluster:last-child { margin-bottom: 0; }
+    .cluster-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--gray-1);
+    }
+    .cluster-title {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--ink);
+    }
+    .cluster-count {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--gray-3);
+    }
+    .cluster-articles {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+    .article-row {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--gray-5);
+      padding: 0.4rem 0.6rem;
+      border-radius: 3px;
+      line-height: 1.4;
+      cursor: pointer;
+      transition: background 0.1s, color 0.1s;
+      text-decoration: none;
+      display: block;
+    }
+    .article-row:hover { background: var(--off-white); color: var(--ink); }
+    .series-footer-wrap { padding: 0 2rem 2rem; margin-top: 1.5rem; }
+    .series-footer {
+      padding: 1.1rem 1.25rem;
+      border: 1px solid var(--gray-1);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .series-footer-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+    .series-footer-text {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--ink-light);
+    }
+    .series-footer-text strong { color: var(--ink); font-weight: 500; }
+
+    /* ── FOOTER ────────────────────────────────────────────────── */
+    .footer {
+      padding: 2rem;
+      border-top: 1px solid var(--gray-1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-logo {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--ink);
+    }
+    .footer-logo span { color: var(--red); }
+    .footer-legal {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--gray-3);
+      margin-top: 0.35rem;
+    }
+    .footer-linkedin {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--gray-4);
+      text-align: right;
+    }
+    .footer-linkedin a { color: var(--red); text-decoration: none; }
+    .footer-linkedin a:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ────────────────────────────────────────────── */
+    @media (max-width: 700px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-photo { aspect-ratio: 1/1; }
+      .proof { grid-template-columns: 1fr; }
+      .proof-item { border-right: none; border-bottom: 1px solid var(--gray-1); }
+      .section-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .creds, .two-col, .featured-grid, .qualifier-body, .cluster-articles { grid-template-columns: 1fr; }
+      .nav-links { gap: 1rem; }
+      .series-footer { flex-direction: column; align-items: flex-start; }
+      .book-bar { margin: 0 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="site">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <img src="../../assets/copetersen-logo.svg" alt="">
+      <span class="nav-logo-text">copetersen<span>.ai</span></span>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#work">Work with me</a>
+      <a href="#thinking">Thinking</a>
+      <a href="https://calendly.com/cop-neuralogics/free-consultation" target="_blank" class="nav-cta">Book a call</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <div class="hero-eyebrow">Christian O. Petersen</div>
+      <h1 class="hero-headline">Vistage Chair, CEO mentor, and AI strategy practitioner.</h1>
+      <p class="hero-sub">I chair a Vistage peer group for CEOs in Silicon Valley's mid peninsula. Twenty-five years of building and scaling companies as a founder, CEO, board chair, and senior executive at organizations from early-stage startups to Fortune 500. I work with CEOs and senior leaders who want a trusted advisor who has made the same decisions you're facing now.</p>
+      <a href="https://calendly.com/cop-neuralogics/free-consultation" target="_blank" class="hero-cta">Book a 30-minute intro call</a>
+      <div class="hero-cta-note">No pitch. We'll talk about where you are, what you're navigating, and whether you would be a good fit for my CEO peer group.</div>
+    </div>
+    <div class="hero-photo">
+      <img src="../../assets/photo-hero.jpg" alt="Christian O. Petersen">
+    </div>
+  </section>
+
+  <!-- PROOF STRIP -->
+  <div class="proof">
+    <div class="proof-item">
+      <div class="proof-num">25+ years</div>
+      <div class="proof-label">Founder, CEO, board chair, and C-suite executive roles</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-num">Startup to F500</div>
+      <div class="proof-label">CloudMade, Brandworkz, Comcast, Neuralogics, and more</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-num">AI Transformation</div>
+      <div class="proof-label">Currently leading AI strategy and transformation, not just advising on it</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section-grid" id="about">
+    <div><div class="section-label">Background</div></div>
+    <div class="about-content">
+      <div class="accent-rule"></div>
+      <h2>25 years making decisions with real consequences</h2>
+      <div class="about-body">
+        <p>I've spent 25 years building and leading companies, and I've made most of the mistakes a founder and executive can make. Twenty-five years gives you a lot of material to work with.</p>
+        <p>I've hired too slowly and fired too late. I've over-engineered products that needed to ship. I've watched good strategies fail because the org wasn't ready to execute them. That experience is what makes the conversations I have with CEOs useful, because I'm not pattern-matching from research. I'm drawing on decisions I've lived with.</p>
+        <div class="photo-block about-photo">
+          <img src="../../assets/photo-boat.jpg" alt="">
+        </div>
+        <p>At Comcast's Silicon Valley Innovation Center, I drove $40M+ in monthly value creation and led a $64M internal capital raise to build their streaming platform, navigating a full industry shift from traditional TV to streaming before most organizations had accepted the shift was coming.</p>
+        <p>At CloudMade, I joined as Co-founder and Interim VP Product with a specific mandate: build the product function and develop the founder into the leader the company needed. I mentored and coached a first-time founder into the VP Product role, and after the Valeo acquisition, he became President of CloudMade. That's one of the outcomes I'm most proud of in my career.</p>
+        <p>At Brandworkz as Chairman, and across several advisory relationships with growth-stage companies, the pattern I kept seeing was the same: leaders who were strong enough to get to a certain level, then stuck there not because their strategy was wrong, but because how they led hadn't evolved. That's the gap I work in.</p>
+        <p>Today I'm Group CTO at Neuralogics, leading AI strategy and transformation across a multi-company SaaS portfolio. Most of the AI conversations at the executive level right now are still abstract, about potential, about readiness, about risk. What I deal with daily is more specific: which AI investments actually grow revenue, which ones create a growing org debt, and how to build a board-level case for choosing the right ones. That's the perspective I bring to the group.</p>
+      </div>
+      <div class="creds">
+        <div class="cred-card">
+          <div class="cred-title">Group CTO: Neuralogics</div>
+          <div class="cred-sub">AI strategy, platform transformation, M&amp;A integration across SaaS portfolio</div>
+        </div>
+        <div class="cred-card">
+          <div class="cred-title">Sr. Director: Comcast SVIC</div>
+          <div class="cred-sub">$40M+ monthly value creation, $64M internal capital raise, streaming platform</div>
+        </div>
+        <div class="cred-card">
+          <div class="cred-title">Co-founder: CloudMade (acq. Valeo)</div>
+          <div class="cred-sub">Mentored first-time founder to VP Product, he then became President post-acquisition</div>
+        </div>
+        <div class="cred-card">
+          <div class="cred-title">Chairman: Brandworkz</div>
+          <div class="cred-sub">CEO and executive coaching, board leadership, organizational development</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEER GROUP -->
+  <section class="section-grid shaded" id="work">
+    <div><div class="section-label">The peer group</div></div>
+    <div class="peer-content">
+      <div class="accent-rule"></div>
+      <div class="vistage-pill">
+        <div class="vistage-dot"></div>
+        <span class="vistage-pill-text">Vistage Chair: Christian O. Petersen</span>
+      </div>
+      <h2>The most valuable input you'll get comes from your peers</h2>
+      <p>The core of what I offer is a Vistage peer advisory group of CEOs and business owners, typically 12 to 16 people, no competing industries, full confidentiality. The format works because the people in the room have skin in the game. They're accountable for the same decisions you are. They've made the same hiring mistakes, carried the same ambiguous board relationships, and lost sleep over the same cash flow timing problems you have. That shared context produces a quality of feedback that consultants, coaches, and advisors, including me, can't manufacture.</p>
+      <p>What I bring is different. I recruit members, which means every CEO and business leader is selected to be non-competitive and to bring value to the group. I facilitate the process, which means the quality of the conversation depends on how well I run it. And I meet with each member individually every month, where I bring my own operating experience and a current, practitioner's view of AI strategy directly to their situation.</p>
+      <div class="photo-block">
+        <img src="../../assets/photo-peers.jpg" alt="Peer group in session">
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-title">Vistage peer advisory group</div>
+          <div class="card-text">12 to 16 CEOs and business leaders. No competing companies. A monthly full-day session structured around getting honest input from your peers who understand the weight of the decisions you're carrying.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">1:1 executive coaching every month</div>
+          <div class="card-text">A dedicated monthly session with me. I won't tell you what to do. I'll ask the questions that help you figure out what you already know you can and want. My job is to be a multiplier: to help you become a better version of the leader you already are.</div>
+        </div>
+        <div class="card full">
+          <div class="card-title">AI strategy: from someone doing it now</div>
+          <div class="card-text">Most AI advice comes from people who have read about it. As Group CTO at Neuralogics, I'm currently leading AI transformation across a multi-company SaaS portfolio. That means I can tell you what's working, what's failing, how to drive growth with AI, and what questions your board will ask.</div>
+        </div>
+      </div>
+      <div class="stat-bar">
+        <div class="stat-num">2.2x</div>
+        <div class="stat-text">Vistage members grow their companies 2.2x faster than their peers. That's not a claim, it's a Dun and Bradstreet study across decades of member data.</div>
+      </div>
+      <div class="qualifier">
+        <div class="qualifier-header">Is this group right for you?</div>
+        <div class="qualifier-body">
+          <div class="qualifier-item">CEO, president, or business owner of a $5M to $150M company</div>
+          <div class="qualifier-item">Based in the mid peninsula, from San Mateo to San Jose</div>
+          <div class="qualifier-item">Ready to work on the business, not just in it</div>
+          <div class="qualifier-item">Open to honest challenge, not just encouragement</div>
+          <div class="qualifier-item">Willing to give as much as you receive</div>
+          <div class="qualifier-item">Navigating AI transformation without a clear path forward</div>
+        </div>
+        <div class="qualifier-note">This group is now forming. If you fit the profile, the next step is a 30-minute conversation.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE CALL -->
+  <section class="section-grid" id="the-call">
+    <div><div class="section-label">The call</div></div>
+    <div class="call-content">
+      <div class="accent-rule"></div>
+      <h2>What to expect in 30 minutes</h2>
+      <p class="call-intro">Most executives who reach out are carrying one of three things: decisions they can't talk through internally, a leadership challenge that's taking up more of their time than it should, or challenges around ensuring their business takes full advantage of AI. The call is 30 minutes. I'll ask what's actually going on, tell you how I work, and give you an honest read on whether there's a fit for you and for the peer CEO group.</p>
+      <div class="call-steps">
+        <div class="call-step">
+          <div class="call-step-title">Where you are</div>
+          <div class="call-step-text">Tell me what's on your plate. Not the polished version, the actual version. That's the only way I can give you a useful read in 30 minutes.</div>
+        </div>
+        <div class="call-step">
+          <div class="call-step-title">How this works</div>
+          <div class="call-step-text">I'll describe the Vistage peer group structure, what monthly 1:1 CEO and executive coaching looks like in practice, and where the AI strategy work fits in. It's more specific than most people expect.</div>
+        </div>
+        <div class="call-step">
+          <div class="call-step-title">Whether there's a fit</div>
+          <div class="call-step-text">Peer groups only work when the membership is right. If I don't think you're the right fit for the group forming now, I'll say so. If the group isn't the right fit for what you're dealing with, I'll say that too.</div>
+        </div>
+      </div>
+      <div class="call-cta-row">
+        <a href="https://calendly.com/cop-neuralogics/free-consultation" target="_blank" class="call-btn">Book your call</a>
+        <div class="call-small">Via Calendly. Typically available within the week.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THINKING -->
+  <section class="section-grid" id="thinking">
+    <div><div class="section-label">Thinking</div></div>
+    <div class="thinking-intro">
+      <div style="width:100%; height:220px; overflow:hidden; border-radius:var(--radius); border:1px solid var(--gray-1); margin-bottom:1.75rem;">
+        <img src="../../assets/photo-thinking.jpg" alt="Christian O. Petersen" style="width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block;">
+      </div>
+      <div class="accent-rule"></div>
+      <h2>AI Growth: a developing point of view</h2>
+      <p>I've been publishing on AI strategy since the early days of enterprise AI adoption, writing for C-suite and senior leaders in midsize enterprises who are accountable for AI outcomes but don't have a dedicated AI organization behind them. The same problem shows up constantly: leaders who understand AI is important but can't get a straight answer on what to actually do with it.</p>
+      <p>These articles are the working foundation for a book on AI Growth. The thinking has evolved as the field has, from foundational strategy through to agentic AI and connected intelligence. The CEOs and business owners in my Vistage peer group are the real-world test of whether these frameworks hold up.</p>
+    </div>
+  </section>
+
+  <div class="book-bar">
+    <div class="book-icon">AI</div>
+    <div>
+      <div class="book-title">AI Growth: Lead, Innovate, and Drive Impact with Artificial Intelligence</div>
+      <div class="book-sub">Book in development. 32 published articles. Written for C-suite and senior leaders in midsize and large enterprises. Publication targeted for 2027.</div>
+    </div>
+  </div>
+
+  <section class="featured">
+    <div class="feat-label">Four articles worth your time</div>
+    <div class="featured-grid">
+      <a href="https://www.linkedin.com/pulse/60-midsize-enterprises-missing-out-ai-driven-growth-petersen-bbloc/" target="_blank" class="featured-card">
+        <div class="featured-tag">Market</div>
+        <div class="featured-title">Midsize enterprises are missing out on AI-driven growth</div>
+        <div class="featured-desc">Large enterprises have AI teams. Startups move fast. Midsize companies are caught in the middle — aware of the urgency but without a clear path. This article is about why that gap exists and what to do about it.</div>
+        <div class="featured-link">Read on LinkedIn →</div>
+      </a>
+      <a href="https://www.linkedin.com/pulse/44-ai-underperforming-55-companies-christian-o-petersen-epaqc" target="_blank" class="featured-card">
+        <div class="featured-tag">Strategy</div>
+        <div class="featured-title">AI is not underperforming. 55% of companies are.</div>
+        <div class="featured-desc">Most organizations blame AI when the real problem is how they've deployed it. This article makes the case for why the gap is a leadership problem, not a technology one.</div>
+        <div class="featured-link">Read on LinkedIn →</div>
+      </a>
+      <a href="https://www.linkedin.com/pulse/58-from-managing-work-decisions-christian-o-petersen-jifjc/" target="_blank" class="featured-card">
+        <div class="featured-tag">Leadership</div>
+        <div class="featured-title">From managing work to managing decisions</div>
+        <div class="featured-desc">AI doesn't just change what gets done. It changes where judgment is required. A practical reframe for leaders figuring out what their job actually looks like now.</div>
+        <div class="featured-link">Read on LinkedIn →</div>
+      </a>
+      <a href="https://www.linkedin.com/pulse/18-who-organization-owns-ai-christian-o-petersen-bq6ac" target="_blank" class="featured-card">
+        <div class="featured-tag">Organization</div>
+        <div class="featured-title">Who in the organization owns AI?</div>
+        <div class="featured-desc">The ownership question is where most AI strategies stall. This article lays out the three governance models, what each one costs you, and when each one makes sense.</div>
+        <div class="featured-link">Read on LinkedIn →</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="clusters">
+    <div class="feat-label">All 32 articles by theme</div>
+
+    <div class="cluster">
+      <div class="cluster-header">
+        <div class="cluster-title">Strategy and competitive position</div>
+        <div class="cluster-count">7 articles</div>
+      </div>
+      <div class="cluster-articles">
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">How AI is Reshaping Competitive Advantage</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">AI Business Models</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">AI-Driven Blue Ocean Strategy</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">How to Create Your AI Growth Strategy for 2026</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">AI Strategy Steering the Business</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">Midsize Enterprises Are Missing Out on AI-Driven Growth</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">AI-Driven Blue Ocean to Enterprise-Wide Adoption</a>
+      </div>
+    </div>
+
+    <div class="cluster">
+      <div class="cluster-header">
+        <div class="cluster-title">Organization, ownership and culture</div>
+        <div class="cluster-count">7 articles</div>
+      </div>
+      <div class="cluster-articles">
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">Who in the Organization Owns AI?</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">Preparing Your Organization for AI Transformation</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">Cultivating a Strategic AI Adoption Culture</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">Build AI Literacy to Realize Business Value</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">Building a Top Team in a World of AI</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">AI Growth and Talent: Building the Workforce of the Future</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">Human-AI Collaboration: Redesigning the Workforce for Hybrid Intelligence</a>
+      </div>
+    </div>
+
+    <div class="cluster">
+      <div class="cluster-header">
+        <div class="cluster-title">Growth, revenue and execution</div>
+        <div class="cluster-count">8 articles</div>
+      </div>
+      <div class="cluster-articles">
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">Rethinking the AI Business Case: From Cost to Growth</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">Measuring AI's True Impact</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">AI Growth Across Marketing and Sales</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">Drive Growth by Scaling AI Across Your Business Systems</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">How to Drive Growth with AI-Accelerated Software Development</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">Building the Data Supply Chain for AI and Growth</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">The Economics of Agentic Work</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">AI is not underperforming. 55% of companies are.</a>
+      </div>
+    </div>
+
+    <div class="cluster">
+      <div class="cluster-header">
+        <div class="cluster-title">Frameworks and tools</div>
+        <div class="cluster-count">5 articles</div>
+      </div>
+      <div class="cluster-articles">
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">How to Build Your AI Growth Canvas</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">How to Build a High-Impact AI Strategy for Your Team</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">Building a High-Impact AI Strategy</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">When AI Strategy Meets January Execution</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">AI Strategy Predictions for 2026</a>
+      </div>
+    </div>
+
+    <div class="cluster">
+      <div class="cluster-header">
+        <div class="cluster-title">Agentic AI and what's next</div>
+        <div class="cluster-count">5 articles</div>
+      </div>
+      <div class="cluster-articles">
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">The Impact of SaaS with Autonomous AI</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">The Real Bottleneck in Agentic AI</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">From Agentic AI to Connected Intelligence</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">From Managing Work to Managing Decisions</a>
+        <a class="article-row" href="https://www.linkedin.com/newsletters/ai-growth-weekly-7294485601528033280/" target="_blank">AI Models Will Become Utilities. Intelligence Will Not.</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="series-footer-wrap">
+    <div class="series-footer">
+      <div>
+        <div class="series-footer-title">Subscribe to my AI articles on LinkedIn</div>
+        <div class="series-footer-text">These articles are part of my LinkedIn newsletter on AI strategy for C-suite and senior leaders. Published every two weeks, I write about AI Strategy, and every other week, I write about how to use AI.</div>
+      </div>
+      <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7294485601528033280" target="_blank" style="display:flex;flex-direction:column;justify-content:center;padding:7px;text-align:center;text-decoration:none;color:#ffffff;width:200px;height:32px;border-radius:16px;background-color:#0A66C2;font-family:'Open Sans',sans-serif;font-size:13px;font-weight:400;white-space:nowrap;flex-shrink:0;">Subscribe on LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>
+      <div class="footer-logo">copetersen <span>AI</span> advisors</div>
+      <div class="footer-legal">copetersen LLC</div>
+    </div>
+    <div>
+      <div class="footer-linkedin">Connect with me on <a href="https://www.linkedin.com/in/copetersen/" target="_blank">LinkedIn</a></div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
