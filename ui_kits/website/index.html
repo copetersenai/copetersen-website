@@ -199,6 +199,7 @@
     }
     .section-grid.shaded { background: var(--off-white); }
     .section-grid + .section-grid { border-top: 1px solid var(--gray-1); }
+    .section-grid[id] { scroll-margin-top: 72px; }
     .section-label {
       font-size: 10px;
       letter-spacing: 0.16em;
@@ -207,11 +208,7 @@
       font-weight: 600;
       padding-top: 6px;
     }
-    .accent-rule {
-      width: 28px; height: 2px;
-      background: var(--red);
-      margin-bottom: 1.5rem;
-    }
+    /* accent-rule removed */
 
     /* ── ABOUT ─────────────────────────────────────────────────── */
     .about-content h2 {
@@ -299,6 +296,7 @@
       overflow: hidden;
       height: 280px;
       margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
       border: 1px solid var(--gray-1);
     }
     .photo-block img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
@@ -699,6 +697,10 @@
       .series-footer { flex-direction: column; align-items: flex-start; }
       .book-bar { margin: 0 1rem; }
 
+      .hero { padding-top: 2rem; }
+      .hero-photo { aspect-ratio: 3/4; }
+      .section-grid { padding-top: 2rem; }
+
       .nav-hamburger { display: flex; }
       .nav-links {
         display: none;
@@ -783,7 +785,6 @@
   <section class="section-grid" id="about">
     <div><div class="section-label">Background</div></div>
     <div class="about-content">
-      <div class="accent-rule"></div>
       <h2>25 years making decisions with real consequences</h2>
       <div class="about-body">
         <p>I've spent 25 years building and leading companies, and I've made most of the mistakes a founder and executive can make. Twenty-five years gives you a lot of material to work with.</p>
@@ -821,7 +822,6 @@
   <section class="section-grid shaded" id="work">
     <div><div class="section-label">The peer group</div></div>
     <div class="peer-content">
-      <div class="accent-rule"></div>
       <div class="vistage-pill">
         <div class="vistage-dot"></div>
         <span class="vistage-pill-text">Vistage Chair: Christian O. Petersen</span>
@@ -869,7 +869,6 @@
   <section class="section-grid" id="the-call">
     <div><div class="section-label">The call</div></div>
     <div class="call-content">
-      <div class="accent-rule"></div>
       <h2>What to expect in 30 minutes</h2>
       <p class="call-intro">Most executives who reach out are carrying one of three things: decisions they can't talk through internally, a leadership challenge that's taking up more of their time than it should, or challenges around ensuring their business takes full advantage of AI. The call is 30 minutes. I'll ask what's actually going on, tell you how I work, and give you an honest read on whether there's a fit for you and for the peer CEO group.</p>
       <div class="call-steps">
@@ -900,7 +899,6 @@
       <div style="width:100%; height:220px; overflow:hidden; border-radius:var(--radius); border:1px solid var(--gray-1); margin-bottom:1.75rem;">
         <img src="../../assets/photo-thinking.jpg" alt="Christian O. Petersen" style="width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block;">
       </div>
-      <div class="accent-rule"></div>
       <h2>AI Growth: a developing point of view</h2>
       <p>I've been publishing on AI strategy since the early days of enterprise AI adoption, writing for C-suite and senior leaders in midsize enterprises who are accountable for AI outcomes but don't have a dedicated AI organization behind them. The same problem shows up constantly: leaders who understand AI is important but can't get a straight answer on what to actually do with it.</p>
       <p>These articles are the working foundation for a book on AI Growth. The thinking has evolved as the field has, from foundational strategy through to agentic AI and connected intelligence. The CEOs and business owners in my Vistage peer group are the real-world test of whether these frameworks hold up.</p>
