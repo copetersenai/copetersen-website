@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-VariableFont_wdth_wght.ttf') format('truetype');
+  font-weight: 100 900; font-style: normal;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Open Sans', sans-serif; background: #F7F5F2; padding: 24px; display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+.logo-block { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.logo-label { font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A09B94; }
+.bg-light { background: #FFFFFF; padding: 16px 20px; border-radius: 4px; border: 1px solid #EAE7E2; }
+.bg-dark { background: #1A1A2E; padding: 16px 20px; border-radius: 4px; }
+.bg-accent { background: #c80815; padding: 16px 20px; border-radius: 4px; }
+</style>
+</head><body>
+  <div class="logo-block">
+    <div class="logo-label">On white</div>
+    <div class="bg-light">
+      <img src="../assets/copetersen-logo.svg" height="40" alt="copetersen logo">
+    </div>
+  </div>
+  <div class="logo-block">
+    <div class="logo-label">On dark — white version</div>
+    <div class="bg-dark">
+      <svg height="40" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#FFFFFF" d="M456.66,36.62v71.08l-5.44.83c-200.4,41.03-351.15,218.42-351.15,431.05s150.75,390.02,351.15,431.05l5.44.83v71.08l-19.51-3.48C204.94,991.5,30.26,785.95,30.26,539.57S204.94,87.64,437.15,40.1l19.51-3.49Z"/>
+        <path fill="#FFFFFF" d="M456.66,201.36v71.93l-25.46,9.32c-100.1,42.34-170.34,141.45-170.34,256.96s70.24,214.62,170.34,256.96l25.46,9.32v71.93l-20.57-5.29c-141.91-44.14-244.95-176.5-244.95-332.92s103.04-288.78,244.95-332.92l20.57-5.29Z"/>
+        <path fill="#FFFFFF" d="M623.34,201.36l20.57,5.29c141.91,44.14,244.95,176.5,244.95,332.92s-103.04,288.78-244.95,332.92l-20.57,5.29v-71.93l25.46-9.32c100.1-42.34,170.34-141.45,170.34-256.96s-70.24-214.62-170.34-256.96l-25.46-9.32v-71.93Z"/>
+        <path fill="#FFFFFF" d="M501.24,29.84h38.35l52.16,2.63c257.25,26.1,457.99,243.18,457.99,507.11,0,246.33-174.87,451.85-407.34,499.38l-19.58,3.49c-.03-23.68-.05-47.37-.08-71.05l5.58-.85c200.62-41.02,351.54-218.39,351.54-430.97,0-227.77-173.24-415.11-395.25-437.64l-6.08-.31v947.68h-77.28V29.84Z"/>
+        <path fill="rgba(255,255,255,0.6)" d="M456.66,386.46v306.23l-14.34-8.72c-46.31-31.29-76.75-84.29-76.75-144.4s30.44-113.1,76.75-144.4l14.34-8.72Z"/>
+        <path fill="rgba(255,255,255,0.6)" d="M623.34,386.46l14.34,8.72c46.31,31.29,76.75,84.29,76.75,144.4s-30.44,113.1-76.75,144.4l-14.34,8.72v-306.23Z"/>
+      </svg>
+    </div>
+  </div>
+  <div class="logo-block">
+    <div class="logo-label">On red</div>
+    <div class="bg-accent">
+      <svg height="40" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#FFFFFF" d="M456.66,36.62v71.08l-5.44.83c-200.4,41.03-351.15,218.42-351.15,431.05s150.75,390.02,351.15,431.05l5.44.83v71.08l-19.51-3.48C204.94,991.5,30.26,785.95,30.26,539.57S204.94,87.64,437.15,40.1l19.51-3.49Z"/>
+        <path fill="#FFFFFF" d="M456.66,201.36v71.93l-25.46,9.32c-100.1,42.34-170.34,141.45-170.34,256.96s70.24,214.62,170.34,256.96l25.46,9.32v71.93l-20.57-5.29c-141.91-44.14-244.95-176.5-244.95-332.92s103.04-288.78,244.95-332.92l20.57-5.29Z"/>
+        <path fill="#FFFFFF" d="M623.34,201.36l20.57,5.29c141.91,44.14,244.95,176.5,244.95,332.92s-103.04,288.78-244.95,332.92l-20.57,5.29v-71.93l25.46-9.32c100.1-42.34,170.34-141.45,170.34-256.96s-70.24-214.62-170.34-256.96l-25.46-9.32v-71.93Z"/>
+        <path fill="#FFFFFF" d="M501.24,29.84h38.35l52.16,2.63c257.25,26.1,457.99,243.18,457.99,507.11,0,246.33-174.87,451.85-407.34,499.38l-19.58,3.49c-.03-23.68-.05-47.37-.08-71.05l5.58-.85c200.62-41.02,351.54-218.39,351.54-430.97,0-227.77-173.24-415.11-395.25-437.64l-6.08-.31v947.68h-77.28V29.84Z"/>
+        <path fill="rgba(255,255,255,0.55)" d="M456.66,386.46v306.23l-14.34-8.72c-46.31-31.29-76.75-84.29-76.75-144.4s30.44-113.1,76.75-144.4l14.34-8.72Z"/>
+        <path fill="rgba(255,255,255,0.55)" d="M623.34,386.46l14.34,8.72c46.31,31.29,76.75,84.29,76.75,144.4s-30.44,113.1-76.75,144.4l-14.34,8.72v-306.23Z"/>
+      </svg>
+    </div>
+  </div>
+  <div class="logo-block">
+    <div class="logo-label">Wordmark</div>
+    <div class="bg-light">
+      <span style="font-family:'Open Sans',sans-serif;font-weight:200;font-size:22px;color:#1A1A2E;letter-spacing:-0.01em;">copetersen<span style="color:#c80815;">.ai</span></span>
+    </div>
+  </div>
+</body></html>

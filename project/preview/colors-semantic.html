@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-VariableFont_wdth_wght.ttf') format('truetype');
+  font-weight: 100 900; font-style: normal;
+}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Open Sans', sans-serif; font-weight: 300; background: #F7F5F2; padding: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .item { background: white; border-radius: 3px; padding: 10px 10px 8px; border: 1px solid #EAE7E2; }
+  .dot { width: 28px; height: 28px; border-radius: 3px; margin-bottom: 6px; border: 1px solid rgba(0,0,0,0.06); }
+  .name { font-size: 10px; font-weight: 600; color: #1A1A2E; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 2px; }
+  .val { font-size: 10px; color: #A09B94; font-family: 'Courier New', monospace; }
+</style>
+</head><body>
+<div class="grid">
+  <div class="item"><div class="dot" style="background:#FFFFFF; border-color:#D4CFC9;"></div><div class="name">bg</div><div class="val">--color-white</div></div>
+  <div class="item"><div class="dot" style="background:#F7F5F2"></div><div class="name">bg-alt</div><div class="val">--color-off-white</div></div>
+  <div class="item"><div class="dot" style="background:#1A1A2E"></div><div class="name">bg-dark</div><div class="val">--color-ink</div></div>
+  <div class="item"><div class="dot" style="background:#1A1A2E"></div><div class="name">fg</div><div class="val">--color-ink</div></div>
+  <div class="item"><div class="dot" style="background:#6B6560"></div><div class="name">fg-muted</div><div class="val">--color-warm-gray-4</div></div>
+  <div class="item"><div class="dot" style="background:#c80815"></div><div class="name">link</div><div class="val">--color-accent</div></div>
+  <div class="item"><div class="dot" style="background:#b00612"></div><div class="name">link-hover</div><div class="val">--color-accent-mid</div></div>
+  <div class="item"><div class="dot" style="background:#c80815"></div><div class="name">cta-bg</div><div class="val">--color-accent</div></div>
+  <div class="item"><div class="dot" style="background:#D4CFC9"></div><div class="name">border</div><div class="val">--color-warm-gray-2</div></div>
+  <div class="item"><div class="dot" style="background:#c80815"></div><div class="name">eyebrow</div><div class="val">--color-accent</div></div>
+</div>
+</body></html>

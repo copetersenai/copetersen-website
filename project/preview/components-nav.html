@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-VariableFont_wdth_wght.ttf') format('truetype');
+  font-weight: 100 900; font-style: normal;
+}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Open Sans', sans-serif; background: #FFFFFF; }
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 64px; border-bottom: 1px solid #EAE7E2; }
+  .logo-area { display: flex; align-items: center; gap: 12px; }
+  .logo-text { font-family: 'Open Sans', sans-serif; font-weight: 200; font-size: 17px; color: #1A1A2E; letter-spacing: 0.04em; }
+  .logo-text span { color: #c80815; }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-link { font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 300; color: #3D3935; letter-spacing: 0.03em; text-decoration: none; cursor: pointer; transition: color 150ms; }
+  .nav-link:hover, .nav-link.active { color: #c80815; }
+  .nav-cta { background: #c80815; color: white; border: none; border-radius: 4px; padding: 9px 20px; font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; cursor: pointer; letter-spacing: 0.03em; }
+  /* Scrolled/frosted state */
+  .nav-scrolled { background: rgba(255,255,255,0.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(212,207,201,0.4); margin-top: 8px; }
+</style>
+</head><body>
+  <!-- Default state -->
+  <nav>
+    <div class="logo-area">
+      <svg width="28" height="16" viewBox="200 0 700 1080" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#1A1A2E" d="M458.48,52.39v68.91l-5.27.8c-194.29,39.78-340.44,211.76-340.44,417.9s146.15,378.12,340.44,417.9l5.27.8v68.91l-18.91-3.38c-225.13-46.09-394.48-245.37-394.48-484.23S214.44,101.86,439.57,55.77l18.91-3.38Z"/>
+        <path fill="#1A1A2E" d="M458.48,212.11v69.74l-24.69,9.03c-97.05,41.04-165.14,137.13-165.14,249.12s68.1,208.08,165.14,249.12l24.69,9.03v69.74l-19.95-5.13c-137.59-42.79-237.48-171.11-237.48-322.76s99.9-279.97,237.48-322.76l19.95-5.13Z"/>
+        <path fill="#1A1A2E" d="M620.07,212.11l19.95,5.13c137.59,42.79,237.48,171.11,237.48,322.76s-99.9,279.97-237.48,322.76l-19.95,5.13v-69.74l24.69-9.03c97.05-41.04,165.14-137.13,165.14-249.12s-68.1-208.08-165.14-249.12l-24.69-9.03v-69.74Z"/>
+        <path fill="#1A1A2E" d="M501.7,45.81h37.18l50.57,2.55c249.4,25.31,444.02,235.76,444.02,491.63,0,238.82-169.53,438.07-394.91,484.15l-18.98,3.39c-.03-22.96-.05-45.92-.08-68.88l5.41-.82c194.5-39.77,340.81-211.72,340.81-417.82,0-220.82-167.96-402.45-383.19-424.29l-5.9-.3v918.77h-74.92V45.81Z"/>
+        <path fill="#c80815" d="M458.48,391.56v296.89l-13.91-8.45c-44.89-30.34-74.41-81.72-74.41-139.99s29.52-109.65,74.41-139.99l13.91-8.45Z"/>
+        <path fill="#c80815" d="M620.07,391.56l13.91,8.45c44.89,30.34,74.41,81.72,74.41,139.99s-29.52,109.65-74.41,139.99l-13.91,8.45v-296.89Z"/>
+      </svg>
+      <span class="logo-text">Christian O. Petersen<span>.ai</span></span>
+    </div>
+    <div class="nav-links">
+      <a class="nav-link">About</a>
+      <a class="nav-link">Peer Groups</a>
+      <a class="nav-link">Coaching</a>
+      <a class="nav-link">AI Strategy</a>
+      <a class="nav-link">Thinking</a>
+      <button class="nav-cta">Schedule a call</button>
+    </div>
+  </nav>
+  <!-- Scrolled / frosted state -->
+  <nav class="nav-scrolled">
+    <div class="logo-area">
+      <svg width="28" height="16" viewBox="200 0 700 1080" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#1A1A2E" d="M458.48,52.39v68.91l-5.27.8c-194.29,39.78-340.44,211.76-340.44,417.9s146.15,378.12,340.44,417.9l5.27.8v68.91l-18.91-3.38c-225.13-46.09-394.48-245.37-394.48-484.23S214.44,101.86,439.57,55.77l18.91-3.38Z"/>
+        <path fill="#1A1A2E" d="M458.48,212.11v69.74l-24.69,9.03c-97.05,41.04-165.14,137.13-165.14,249.12s68.1,208.08,165.14,249.12l24.69,9.03v69.74l-19.95-5.13c-137.59-42.79-237.48-171.11-237.48-322.76s99.9-279.97,237.48-322.76l19.95-5.13Z"/>
+        <path fill="#1A1A2E" d="M620.07,212.11l19.95,5.13c137.59,42.79,237.48,171.11,237.48,322.76s-99.9,279.97-237.48,322.76l-19.95,5.13v-69.74l24.69-9.03c97.05-41.04,165.14-137.13,165.14-249.12s-68.1-208.08-165.14-249.12l-24.69-9.03v-69.74Z"/>
+        <path fill="#1A1A2E" d="M501.7,45.81h37.18l50.57,2.55c249.4,25.31,444.02,235.76,444.02,491.63,0,238.82-169.53,438.07-394.91,484.15l-18.98,3.39c-.03-22.96-.05-45.92-.08-68.88l5.41-.82c194.5-39.77,340.81-211.72,340.81-417.82,0-220.82-167.96-402.45-383.19-424.29l-5.9-.3v918.77h-74.92V45.81Z"/>
+        <path fill="#c80815" d="M458.48,391.56v296.89l-13.91-8.45c-44.89-30.34-74.41-81.72-74.41-139.99s29.52-109.65,74.41-139.99l13.91-8.45Z"/>
+        <path fill="#c80815" d="M620.07,391.56l13.91,8.45c44.89,30.34,74.41,81.72,74.41,139.99s-29.52,109.65-74.41,139.99l-13.91,8.45v-296.89Z"/>
+      </svg>
+      <span class="logo-text">Christian O. Petersen<span>.ai</span></span>
+    </div>
+    <div class="nav-links">
+      <a class="nav-link active">About</a>
+      <a class="nav-link">Peer Groups</a>
+      <a class="nav-link">Coaching</a>
+      <a class="nav-link">AI Strategy</a>
+      <a class="nav-link">Thinking</a>
+      <button class="nav-cta">Schedule a call</button>
+    </div>
+  </nav>
+</body></html>

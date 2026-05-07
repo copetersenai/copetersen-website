@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-VariableFont_wdth_wght.ttf') format('truetype');
+  font-weight: 100 900; font-style: normal;
+}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Open Sans', sans-serif; font-weight: 300; background: #EAE7E2; padding: 20px; }
+  .row { display: flex; gap: 16px; align-items: flex-start; }
+  /* Proof/stat card */
+  .card-stat { background: white; border-radius: 4px; padding: 20px 22px; box-shadow: 0 1px 3px rgba(26,26,46,0.08); flex: 1; min-width: 120px; }
+  .stat-number { font-family: 'Open Sans', sans-serif; font-weight: 200; font-size: 36px; color: #1A1A2E; letter-spacing: -0.02em; line-height: 1; }
+  .stat-label { font-size: 11px; font-weight: 300; color: #6B6560; margin-top: 6px; letter-spacing: 0.04em; }
+  /* Service card */
+  .card-service { background: white; border-radius: 4px; padding: 20px 22px; box-shadow: 0 4px 12px rgba(26,26,46,0.08); flex: 1.4; }
+  .card-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #c80815; margin-bottom: 8px; }
+  .card-title { font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 18px; color: #1A1A2E; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .card-body { font-size: 13px; font-weight: 300; color: #6B6560; line-height: 1.65; }
+  .card-link { font-size: 12px; font-weight: 400; color: #c80815; margin-top: 12px; display: flex; align-items: center; gap: 4px; }
+  .card-link::after { content: '→'; }
+  /* Testimonial card */
+  .card-quote { background: #1A1A2E; border-radius: 4px; padding: 20px 22px; flex: 1.6; }
+  .quote-text { font-family: 'Open Sans', sans-serif; font-weight: 200; font-size: 15px; color: rgba(255,255,255,0.88); line-height: 1.6; font-style: italic; }
+  .quote-author { font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.45); margin-top: 10px; letter-spacing: 0.04em; }
+  .quote-mark { font-size: 32px; color: #c80815; font-family: Georgia, serif; line-height: 0.8; margin-bottom: 8px; }
+</style>
+</head><body>
+  <div class="row">
+    <div class="card-stat">
+      <div class="stat-number">17+</div>
+      <div class="stat-label">Years as Vistage Chair</div>
+    </div>
+    <div class="card-stat">
+      <div class="stat-number">200+</div>
+      <div class="stat-label">CEO members coached</div>
+    </div>
+    <div class="card-service">
+      <div class="card-eyebrow">Peer Advisory</div>
+      <div class="card-title">A group of trusted peers who get it</div>
+      <div class="card-body">Ten CEOs. Six weeks. Honest conversation about what's hard, what's working, and what's next.</div>
+      <div class="card-link">Learn more</div>
+    </div>
+    <div class="card-quote">
+      <div class="quote-mark">"</div>
+      <div class="quote-text">Christian creates the kind of space where you can actually say what's true.</div>
+      <div class="quote-author">— CEO, SaaS company · mid-peninsula</div>
+    </div>
+  </div>
+</body></html>

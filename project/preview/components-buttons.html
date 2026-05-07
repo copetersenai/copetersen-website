@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-VariableFont_wdth_wght.ttf') format('truetype');
+  font-weight: 100 900; font-style: normal;
+}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Open Sans', sans-serif; font-weight: 300; background: #F7F5F2; padding: 24px; }
+  .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; }
+  .row + .row { border-top: 1px solid #EAE7E2; padding-top: 14px; }
+  .eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #A09B94; margin-bottom: 10px; }
+  /* Primary CTA */
+  .btn-primary { background: #c80815; color: white; border: none; border-radius: 4px; padding: 12px 28px; font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 400; letter-spacing: 0.04em; cursor: pointer; transition: all 200ms ease; }
+  .btn-primary:hover { background: #b00612; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(139,26,46,0.28); }
+  /* Primary outline */
+  .btn-outline { background: transparent; color: #c80815; border: 1.5px solid #c80815; border-radius: 4px; padding: 11px 28px; font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 400; letter-spacing: 0.04em; cursor: pointer; }
+  /* Ghost on dark */
+  .btn-ghost { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.5); border-radius: 4px; padding: 11px 28px; font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 300; letter-spacing: 0.04em; cursor: pointer; }
+  /* Text link */
+  .btn-link { background: none; border: none; color: #c80815; font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 400; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+  .btn-link::after { content: '→'; }
+  /* Disabled */
+  .btn-disabled { background: #D4CFC9; color: #A09B94; border: none; border-radius: 4px; padding: 12px 28px; font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 400; cursor: not-allowed; }
+  /* Small */
+  .btn-sm { background: #c80815; color: white; border: none; border-radius: 4px; padding: 8px 18px; font-family: 'Open Sans', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.04em; cursor: pointer; }
+  .dark-row { background: #1A1A2E; padding: 14px 12px; border-radius: 4px; display: flex; gap: 12px; align-items: center; }
+</style>
+</head><body>
+  <div class="eyebrow">Buttons</div>
+  <div class="row">
+    <button class="btn-primary">Schedule a call</button>
+    <button class="btn-outline">Learn more</button>
+    <button class="btn-link">Read more</button>
+    <button class="btn-sm">Apply</button>
+    <button class="btn-disabled" disabled>Unavailable</button>
+  </div>
+  <div class="dark-row">
+    <button class="btn-primary">Schedule a call</button>
+    <button class="btn-ghost">Learn more</button>
+    <button class="btn-link" style="color:#e02030;">Read more</button>
+  </div>
+</body></html>
